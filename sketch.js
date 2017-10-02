@@ -21,6 +21,8 @@ function draw() {
   if (newShape) newShape.draw(true);
 
   displayMode();
+
+  displayHelp();
 }
 
 function displayMode() {
@@ -43,6 +45,10 @@ function displayMode() {
   text("Stroke weight: " + w, 25, 56);
   text("Fill: " + (f == -1 ? "None" : f), 25, 76);
   text("Shape: " + (c ? "Curve" : "Polygon"), 25, 96);
+}
+
+function displayHelp() {
+  text("(M)ode (S)troke Stroke(w)eight (F)ill (C)urve (Del)ete z-(Up) z-(Down)", 20, windowHeight - 20);
 }
 
 function drawButton(x, y) {
